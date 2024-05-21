@@ -11,17 +11,17 @@ body {
 section {
   max-width: 1220px;
   margin: 0 auto;
+  padding: 100px 0;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
-  gap: 64px;
+  grid-gap: 64px;
 }
 
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
-    url("../images/bts-background.jpeg");
+    url("../images/bts-background-2.webp");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -31,21 +31,22 @@ header {
 
 header h3 {
   font-size: 22px;
-  line-height: 1.5;
   margin: 0;
 }
 
 header h1 {
   font-family: "Aldrich", sans-serif;
+  font-style: normal;
   font-size: 128px;
-  line-height: 1.5;
+  letter-spacing: 10px;
   margin: 0;
+  padding: 60px 0 30px 0;
 }
 
 header h2 {
   font-size: 34px;
   font-weight: 600;
-  line-height: 1.5;
+  letter-spacing: 2px;
   margin: 0;
 }
 
@@ -61,13 +62,38 @@ header a {
   text-decoration: none;
 }
 
+.about-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.img-responsive {
+  max-width: 100%;
+}
+
+main h3 {
+  color: #8249d6;
+}
+
+main h2 {
+  color: white;
+  font-family: "Aldrich", sans-serif;
+  font-size: 48px;
+}
+
+main p {
+  color: white;
+}
+
 footer {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url("../images/bts-footer.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-  padding: 100px 0;
+}
+
+.footer-grid {
+  grid-template-columns: 1fr 2fr 2fr;
 }
 
 footer h3 {
@@ -125,5 +151,13 @@ a:hover {
   header a {
     font-size: 12px;
     padding: 12px 24px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 50px;
   }
 }
