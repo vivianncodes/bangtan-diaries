@@ -9,9 +9,9 @@ body {
 }
 
 section {
-  max-width: 1220px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 100px;
 }
 
 .grid {
@@ -21,7 +21,7 @@ section {
 
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
-    url("../images/bts-background-2.webp");
+    url("/images/bts-background-1.webp");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -82,6 +82,54 @@ main h2 {
 
 main p {
   color: white;
+}
+
+.members {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/images/bts-background-2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.card h4 {
+  font-size: 24px;
+  margin: 0 0 15px 0;
+}
+
+.card h5 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.card p {
+  color: black;
+}
+
+.card-footer {
+  padding: 0 20px 20px;
+}
+
+.btn {
+  display: block;
+  border: none;
+  background: #8249d6;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
 }
 
 footer {
