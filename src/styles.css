@@ -16,7 +16,7 @@ section {
 
 .grid {
   display: grid;
-  grid-gap: 64px;
+  grid-gap: 30px;
   margin: 0;
 }
 
@@ -93,16 +93,9 @@ main p {
 }
 
 /* MEMBER PROFILES */
-.members {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/images/bts-background-2.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .members-grid {
-  display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
 }
 
 .card {
@@ -141,14 +134,73 @@ main p {
   text-decoration: none;
 }
 
-/* FAVORITES */
+/* SONGS */
+.favorites {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url("/images/bts-background-2.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .embed-grid {
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
 }
 
 .video {
   border-radius: 10px;
+}
+
+/* ALBUMS */
+.solo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 35px;
+  margin-top: 60px;
+}
+
+ul {
+  padding: 0;
+}
+
+.album-container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: all 100ms ease;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.album-container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /* FOOTER */
@@ -212,6 +264,10 @@ a:hover {
   .members-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .solo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 945px) {
@@ -273,6 +329,10 @@ a:hover {
   .footer-grid {
     padding: 30px;
   }
+
+  .text {
+    font-size: 15;
+  }
 }
 
 @media (max-width: 643px) {
@@ -284,5 +344,9 @@ a:hover {
 @media (max-width: 575px) {
   .members-grid {
     grid-template-columns: 1fr;
+  }
+
+  .solo-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
